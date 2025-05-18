@@ -12,6 +12,7 @@ const Logo: React.FC<LogoProps> = ({ className = "", light = false }) => {
         src="/attached_assets/image_1747548875281.png"
         alt="NEF TRANSIT EXPRESS SARL"
         className="h-full w-auto"
+        style={{ maxHeight: '60px' }}
       />
     </div>
   );
