@@ -9,7 +9,7 @@ const Logo: React.FC<LogoProps> = ({ className = "", light = false }) => {
   return (
     <div className={className}>
       <img
-        src="/attached_assets/image_1747548875281.png"
+        src="/assets/logo.png"
         alt="NEF TRANSIT EXPRESS SARL"
         className="h-full w-auto"
         style={{ maxHeight: '60px' }}
