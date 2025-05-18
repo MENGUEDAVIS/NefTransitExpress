@@ -12,7 +12,7 @@ const Stats: React.FC = () => {
     },
     {
       id: 2,
-      value: "1200+",
+      value: "200+",
       label: "Expéditions par an"
     },
     {

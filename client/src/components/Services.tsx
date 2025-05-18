@@ -37,7 +37,7 @@ const Services: React.FC = () => {
     },
     {
       id: 2,
-      title: "Transit",
+      title: "Transit (Import & Export)",
       description: "Solutions de transport international par voie aérienne, maritime et terrestre, adaptées à vos délais et à la nature de vos marchandises.",
       icon: "plane",
       imageUrl: cargoPlaneImages[0]

@@ -48,10 +48,15 @@ export class MemStorage implements IStorage {
   async createContactSubmission(submission: InsertContactSubmission): Promise<ContactSubmission> {
     const id = this.contactId++;
     const createdAt = new Date();
+    // Gestion explicite des champs pour s'assurer que null est utilisé pour les valeurs optionnelles manquantes
     const contactSubmission: ContactSubmission = { 
-      ...submission, 
-      id, 
-      createdAt 
+      id,
+      name: submission.name,
+      email: submission.email,
+      phone: submission.phone || null,
+      subject: submission.subject,
+      message: submission.message,
+      createdAt
     };
     this.contactSubmissions.set(id, contactSubmission);
     return contactSubmission;
@@ -60,10 +65,16 @@ export class MemStorage implements IStorage {
   async createQuoteRequest(request: InsertQuoteRequest): Promise<QuoteRequest> {
     const id = this.quoteId++;
     const createdAt = new Date();
+    // Gestion explicite des champs pour s'assurer que null est utilisé pour les valeurs optionnelles manquantes
     const quoteRequest: QuoteRequest = { 
-      ...request, 
-      id, 
-      createdAt 
+      id,
+      name: request.name,
+      email: request.email,
+      phone: request.phone || null,
+      company: request.company || null,
+      serviceType: request.serviceType,
+      details: request.details || null,
+      createdAt
     };
     this.quoteRequests.set(id, quoteRequest);
     return quoteRequest;

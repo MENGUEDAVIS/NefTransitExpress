@@ -37,30 +37,30 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/">
-              <Logo className="h-16 w-auto" />
+              <Logo className="h-14 w-auto md:h-16" />
             </Link>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('accueil')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
+            <button onClick={() => scrollToSection('accueil')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
               Accueil
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
             </button>
-            <button onClick={() => scrollToSection('a-propos')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative">
+            <button onClick={() => scrollToSection('a-propos')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
               À Propos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
             </button>
-            <button onClick={() => scrollToSection('services')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative">
+            <button onClick={() => scrollToSection('services')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
               Services
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
             </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative">
+            <button onClick={() => scrollToSection('contact')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
               Contact
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
             </button>
             <Button 
               onClick={() => scrollToSection('devis')} 
-              className="bg-[#2699D6] hover:bg-[#0A4D8F] transition-colors duration-300">
+              className="bg-[#2699D6] hover:bg-[#0A4D8F] transition-colors duration-300 whitespace-nowrap text-sm px-3 lg:text-base lg:px-4">
               Demander un devis
             </Button>
           </nav>
