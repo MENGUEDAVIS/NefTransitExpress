@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
+import Partners from '@/components/Partners';
 import Cta from '@/components/Cta';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
         <Services />
         <Stats />
         <Testimonials />
+        <Partners />
         <Cta />
         <Contact />
       </main>

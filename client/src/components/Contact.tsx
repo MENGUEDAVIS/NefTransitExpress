@@ -80,12 +80,12 @@ const Contact: React.FC = () => {
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Téléphone",
-      details: ["+237 XXX XXX XXX", "+237 XXX XXX XXX"]
+      details: ["+237 6 74 71 72 85", "+237 6 94 99 07 62"]
     },
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      details: ["info@neftransit.com", "contact@neftransit.com"]
+      details: ["ndjana@neftransit.net", "contact@neftransit.net"]
     },
     {
       icon: <Clock className="h-5 w-5" />,
