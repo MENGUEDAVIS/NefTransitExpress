@@ -32,46 +32,47 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/90 py-4'}`}>
-      <div className="container mx-auto px-4">
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-1' : 'bg-white/90 py-2'}`}>
+      <div className="container mx-auto px-2 sm:px-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex-shrink-0 flex items-center">
             <Link href="/">
-              <Logo className="h-14 w-auto md:h-16" />
+              <Logo className="h-10 w-auto sm:h-12 md:h-14" />
             </Link>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-            <button onClick={() => scrollToSection('accueil')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
-              Accueil
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
-            </button>
-            <button onClick={() => scrollToSection('a-propos')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
-              À Propos
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
-            </button>
-            <button onClick={() => scrollToSection('services')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
-              Services
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 relative text-sm lg:text-base">
-              Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2699D6] transition-all duration-300 group-hover:w-full" />
-            </button>
-            <Button 
-              onClick={() => scrollToSection('devis')} 
-              className="bg-[#2699D6] hover:bg-[#0A4D8F] transition-colors duration-300 whitespace-nowrap text-sm px-3 lg:text-base lg:px-4">
-              Demander un devis
-            </Button>
-          </nav>
+          <div className="hidden md:flex flex-wrap items-center justify-end">
+            <div className="flex flex-wrap items-center space-x-2 lg:space-x-5">
+              <button onClick={() => scrollToSection('accueil')} className="px-1 sm:px-2 py-1 text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 text-xs sm:text-sm lg:text-base">
+                Accueil
+              </button>
+              <button onClick={() => scrollToSection('a-propos')} className="px-1 sm:px-2 py-1 text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 text-xs sm:text-sm lg:text-base">
+                À Propos
+              </button>
+              <button onClick={() => scrollToSection('services')} className="px-1 sm:px-2 py-1 text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 text-xs sm:text-sm lg:text-base">
+                Services
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="px-1 sm:px-2 py-1 text-gray-800 hover:text-[#2699D6] font-medium transition-colors duration-300 text-xs sm:text-sm lg:text-base">
+                Contact
+              </button>
+            </div>
+            
+            <div className="ml-2 lg:ml-4">
+              <Button 
+                onClick={() => scrollToSection('devis')} 
+                className="bg-[#2699D6] hover:bg-[#0A4D8F] transition-colors duration-300 whitespace-nowrap text-xs h-8 px-2 sm:text-sm sm:h-9 sm:px-3 lg:text-base lg:h-10 lg:px-4">
+                Demander un devis
+              </Button>
+            </div>
+          </div>
           
           <Button 
             variant="ghost" 
-            size="icon" 
-            className="md:hidden" 
+            size="sm"
+            className="md:hidden h-8 w-8 p-0"
             onClick={toggleMenu}
             aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}>
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
         
