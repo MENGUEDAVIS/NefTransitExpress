@@ -14,13 +14,16 @@ import 'swiper/css/autoplay';
 import medicalPlusLogo from '../assets/partners/medical-plus.png';
 import mediffLogo from '../assets/partners/mediff.png';
 import fipcamLogo from '../assets/partners/fipcam.png';
+import kribiPortLogo from '../assets/partners/ports/kribi.png';
+import doualaPortLogo from '../assets/partners/ports/douala.png';
+import adcLogo from '../assets/partners/airports/adc.png';
 
 interface PartnerItem {
   id: number;
   name: string;
   category: 'company' | 'port' | 'airport';
-  logo?: string;
-  image?: string;
+  logo: string;
+  description?: string;
 }
 
 const Partners: React.FC = () => {
@@ -49,15 +52,17 @@ const Partners: React.FC = () => {
   const portPartners: PartnerItem[] = [
     { 
       id: 4, 
-      name: 'Port de Kribi', 
+      name: 'Port Autonome de Kribi', 
       category: 'port',
-      image: 'https://images.unsplash.com/photo-1624383221340-86d8a162d7c4?q=80&w=800&auto=format&fit=crop' 
+      logo: kribiPortLogo,
+      description: 'Partenaire stratégique pour nos opérations maritimes'
     },
     { 
       id: 5, 
-      name: 'Port de Douala', 
+      name: 'Port Autonome de Douala', 
       category: 'port',
-      image: 'https://images.unsplash.com/photo-1573633509389-0b3071b644b0?q=80&w=800&auto=format&fit=crop' 
+      logo: doualaPortLogo,
+      description: 'Partenaire stratégique pour nos opérations maritimes'
     },
   ];
   
@@ -66,13 +71,15 @@ const Partners: React.FC = () => {
       id: 6, 
       name: 'Aéroport International de Nsimalen', 
       category: 'airport',
-      image: 'https://images.unsplash.com/photo-1539297094569-fd9be9433dd0?q=80&w=800&auto=format&fit=crop' 
+      logo: adcLogo,
+      description: 'Partenaire pour nos services de fret aérien' 
     },
     { 
       id: 7, 
       name: 'Aéroport de Douala', 
       category: 'airport',
-      image: 'https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=800&auto=format&fit=crop' 
+      logo: adcLogo,
+      description: 'Partenaire pour nos services de fret aérien' 
     },
   ];
 
@@ -142,16 +149,16 @@ const Partners: React.FC = () => {
               {portPartners.map((partner) => (
                 <SwiperSlide key={partner.id}>
                   <div className="bg-white rounded-lg shadow-md overflow-hidden h-80">
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 flex items-center justify-center p-4">
                       <img 
-                        src={partner.image} 
+                        src={partner.logo} 
                         alt={partner.name}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                        className="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-110" 
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 text-center">
                       <h5 className="text-lg font-semibold text-gray-800 mb-2">{partner.name}</h5>
-                      <p className="text-sm text-gray-600">Partenaire stratégique pour nos opérations maritimes</p>
+                      <p className="text-sm text-gray-600">{partner.description}</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -178,16 +185,16 @@ const Partners: React.FC = () => {
               {airportPartners.map((partner) => (
                 <SwiperSlide key={partner.id}>
                   <div className="bg-white rounded-lg shadow-md overflow-hidden h-80">
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
                       <img 
-                        src={partner.image} 
+                        src={partner.logo} 
                         alt={partner.name}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                        className="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-110" 
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 text-center">
                       <h5 className="text-lg font-semibold text-gray-800 mb-2">{partner.name}</h5>
-                      <p className="text-sm text-gray-600">Partenaire pour nos services de fret aérien</p>
+                      <p className="text-sm text-gray-600">{partner.description}</p>
                     </div>
                   </div>
                 </SwiperSlide>
